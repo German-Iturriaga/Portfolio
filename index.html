@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Germán Mendoza · Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ─── SIDEBAR ─────────────────────────── -->
+<aside id="sidebar">
+  <div class="avatar-wrap">
+    <img src="imagenes/perfil.jpg" alt="Germán Mendoza" />
+  </div>
+
+  <h1>Germán Mendoza</h1>
+  <p class="tagline">VR · 3D · Game Dev</p>
+
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+    <a href="archivos/Curriculum_vitae.pdf" download class="btn-cv">
+    Descargar CV
+    </a>
+  </nav>
+
+  <div class="side-contact">
+    <a href="mailto:germeniturri2@gmail.com">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      germeniturri2@gmail.com
+    </a>
+    <a href="https://www.linkedin.com/in/german-mendoza-32a280332/" target="_blank">
+      <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      LinkedIn
+    </a>
+
+  </div>
+</aside>
+
+<!-- ─── MAIN CONTENT ───────────────────── -->
+<main id="main">
+
+  <!-- Sobre mi -->
+  <section id="sobre-mi">
+    <p class="section-title">// introduccion</p>
+    <h2 class="section-heading">Sobre mi</h2>
+    <p class="lead">
+      Hola, soy Germán. Actualmente estoy cursando mi 5 año de Ingenieria en Realidad Virtual, me gusta el desarrollo de tecnologias 3d, el diseño y la impresion 3d. Me interes principal es crear experiencias inmersivas que fusionen tecnologia y creatividad.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Realidad Virtual</span>
+      <span class="badge">Desarrollo 3D</span>
+      <span class="badge">Game Dev</span>
+      <span class="badge">Diseño Digital</span>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <p class="section-title">// tecnologias</p>
+    <h2 class="section-heading">Habilidades Tecnicas</h2>
+    <div class="skills-grid">
+
+      <a class="skill-card" href="https://unity.com/" target="_blank">
+        <div class="skill-icon unity">
+          <img src="imagenes/logos/unity.png" alt="Unity" style="width:40px;height:40px;object-fit:contain;" />
+        </div>
+        <p>Unity</p>
+      </a>
+
+      <a class="skill-card" href="https://www.blender.org/" target="_blank">
+         <div class="skill-icon blender">
+          <img src="imagenes/logos/blender.png" alt="Blender" style="width:40px;height:40px;object-fit:contain;" />
+         </div>
+         <p>Blender</p>
+      </a>
+      
+      <a class="skill-card" href="https://www.unrealengine.com/" target="_blank">
+        <div class="skill-icon unreal">
+          <img src="imagenes/logos/unreal.png" alt="Unreal Engine" style="width:40px;height:40px;object-fit:contain;" />
+        </div>
+        <p>Unreal Engine</p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos">
+    <p class="section-title">// trabajos</p>
+    <h2 class="section-heading">Proyectos</h2>
+    <div class="filtros">
+    <button class="filtro activo" onclick="filtrar('todos')">Todos</button>
+    <button class="filtro" onclick="filtrar('unity')">Unity</button>
+    <button class="filtro" onclick="filtrar('blender')">Blender</button>
+    <button class="filtro" onclick="filtrar('unreal')">Unreal</button>
+  </div>
+    <div class="projects-list">
+
+      <div class="project-card" data-categoria="unity" onclick="openModal('chanchitos')">
+        <div class="project-thumb">
+          <img src="imagenes/proyectos/proyecto1/proyecto1.jpg" alt="Chanchitos Run" />
+        </div>
+        <div class="project-body">
+          <h3>Chanchitos Run</h3>
+          <p>Chanchitos solos en una granja? que podria salir mal, divierte con estos simpaticos cerditos</p>
+          <div style="margin-top:0.75rem;">
+            <span class="project-tag">Multiplayer</span>
+            <span class="project-tag">Unity</span>
+            <span class="project-tag">3D</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-categoria="unity" onclick="openModal('iteralizard')">
+        <div class="project-thumb">
+          <img src="imagenes/proyectos/proyecto2/proyecto2.jpg" alt="Iteralizard" />
+        </div>
+        <div class="project-body">
+          <h3>Iteralizard</h3>
+          <p>Inspirado en la frase "tu vida como moneda de cambio": un videojuego donde protagonizas a una lagartija que debe vender partes de su cuerpo para sobrevivir en un mundo hostil.</p>
+          <div style="margin-top:0.75rem;">
+            <span class="project-tag">Singleplayer</span>
+            <span class="project-tag">Diseño de niveles</span>
+            <span class="project-tag">Unity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-categoria="blender" onclick="openModal('hades')">
+        <div class="project-thumb">
+          <img src="imagenes/proyectos/proyecto3/proyecto3.png" alt="Assets Estilo Hades" />
+        </div>
+        <div class="project-body">
+          <h3>Assets estilo Hades</h3>
+          <p>Inspirados en en el juego Hades con unos compañeros decidimos recrear uno de los escenarios en unity.</p>
+          <div style="margin-top:0.75rem;">
+            <span class="project-tag">Diseño 3D</span>
+            <span class="project-tag">Diseño de Assets</span>
+            <span class="project-tag">Unity</span>
+          </div>
+        </div>
+      </div>
+
+       <div class="project-card" data-categoria="blender" onclick="openModal('piedras')">
+        <div class="project-thumb">
+          <img src="imagenes/proyectos/proyecto4/proyecto4.png" alt="Assets Estilo Hades" />
+        </div>
+        <div class="project-body">
+          <h3>Props piedras</h3>
+          <p>Recopilacion de assets que hice durante una clase de modelado organico</p>
+          <div style="margin-top:0.75rem;">
+            <span class="project-tag">3D</span>
+            <span class="project-tag">Diseño de Assets</span>
+            <span class="project-tag">Blender</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modal" onclick="closeOnOverlay(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">X</button>
+      <div class="modal-gallery" id="modal-gallery">
+        <button class="gallery-arrow left" onclick="shiftSlide(-1)">&#8249;</button>
+        <button class="gallery-arrow right" onclick="shiftSlide(1)">&#8250;</button>
+        <div class="gallery-nav" id="gallery-dots"></div>
+      </div>
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <div class="modal-tags" id="modal-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <p class="section-title">// hablemos</p>
+    <h2 class="section-heading">Contacto</h2>
+    <div class="contact-grid">
+
+      <a class="contact-card" href="mailto:germeniturri2@gmail.com">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;color:var(--accent2)"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <div>
+          <div class="cl">Email</div>
+          <div class="cv">germeniturri2@gmail.com</div>
+        </div>
+      </a>
+
+      <a class="contact-card" href="https://www.linkedin.com/in/german-mendoza-32a280332/" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;color:var(--accent2)"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <div>
+          <div class="cl">LinkedIn</div>
+          <div class="cv">German Mendoza</div>
+        </div>
+      </a>
+
+
+
+    </div>
+  </section>
+
+</main>
+
+<script>
+  var proyectos = {
+    chanchitos: {
+      title: 'Chanchitos Run',
+      desc: 'Chanchitos run esta pensado como una experiencia multijugador donde los jugadores interpretaran a un bonito chanchito y tendran que competir para ver cual es el chanchito mas rapido, proyecto desarrolado en unity, se uso PUN2 para la experiencia multijugador y blender para modelar los personajes y texturizarlos',
+      tags: ['Multiplayer', 'Unity', '3D'],
+      imgs: [
+      'imagenes/proyectos/proyecto1/proyecto1.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_2.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_3.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_4.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_5.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_6.jpg',
+      'imagenes/proyectos/proyecto1/proyecto1_7.jpg'
+      ]
+    },
+    iteralizard: {
+      title: 'Iteralizard',
+      desc: 'Inspirado en la frase tu vida como moneda de cambio: Iteralizard es prototipo de videojuego donde protagonizas a una lagartija que aprovchando su factor de regeneracion, debe vender partes de su cuerpo para sobrevivir en un mundo hostil, obviamente esto tiene un costo.',
+      tags: ['Singleplayer', 'Diseno de niveles', 'Unity'],
+      imgs: [
+      'imagenes/proyectos/proyecto2/proyecto2.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_2.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_3.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_4.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_4.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_5.jpg',
+      'imagenes/proyectos/proyecto2/proyecto2_6.jpg'
+      ]
+    },
+    hades:{
+      title: 'Assets Hades',
+      desc: 'Para una clase de cracion de assets decidimos convertir los assets 2d de Hades a un proyecto 3d en unity',
+      tags: ['Diseño de assets', '3D', 'Unity'],
+      imgs: [
+        'imagenes/proyectos/proyecto3/proyecto3.png',
+        'imagenes/proyectos/proyecto3/proyecto3_2.png',
+        'imagenes/proyectos/proyecto3/proyecto3_3.png',
+        'imagenes/proyectos/proyecto3/proyecto3_4.png'
+      ]
+    },
+    piedras:{
+      title: 'Props piedras',
+      desc: 'Para la clase de modelado organico se nos pidio hacer escenarios y yo hice esta montaña de rocas',
+      tags:['3d','Diseño de assets','Blender'],
+      imgs:[
+        'imagenes/proyectos/proyecto4/proyecto4.png',
+        'imagenes/proyectos/proyecto4/proyecto4_2.png',
+        'imagenes/proyectos/proyecto4/proyecto4_3.png',
+        'imagenes/proyectos/proyecto4/proyecto4_4.png',
+        'imagenes/proyectos/proyecto4/proyecto4_5.png',
+        'imagenes/proyectos/proyecto4/proyecto4_6.png'
+      ]
+    }
+  };
+
+  var currentSlide = 0;
+  var slideImgs = [];
+
+  function openModal(id) {
+    var p = proyectos[id];
+    currentSlide = 0;
+    slideImgs = p.imgs;
+
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-desc').textContent = p.desc;
+
+    var tagsEl = document.getElementById('modal-tags');
+    tagsEl.innerHTML = p.tags.map(function(t) {
+      return '<span class="project-tag">' + t + '</span>';
+    }).join('');
+
+    var gallery = document.getElementById('modal-gallery');
+    gallery.querySelectorAll('img').forEach(function(i) { i.remove(); });
+
+    p.imgs.forEach(function(src, i) {
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = p.title + ' ' + (i + 1);
+      if (i === 0) img.classList.add('active');
+      gallery.insertBefore(img, gallery.querySelector('.gallery-arrow'));
+    });
+
+    var dots = document.getElementById('gallery-dots');
+    dots.innerHTML = p.imgs.map(function(_, i) {
+      return '<button class="gallery-dot' + (i === 0 ? ' active' : '') + '" onclick="goToSlide(' + i + ')"></button>';
+    }).join('');
+
+    document.getElementById('modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeOnOverlay(e) {
+    if (e.target === document.getElementById('modal')) closeModal();
+  }
+
+  function goToSlide(n) {
+    var imgs = document.querySelectorAll('#modal-gallery img');
+    var dots = document.querySelectorAll('.gallery-dot');
+    imgs[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = (n + slideImgs.length) % slideImgs.length;
+    imgs[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
+
+  function shiftSlide(dir) { goToSlide(currentSlide + dir); }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === 'ArrowLeft') shiftSlide(-1);
+    if (e.key === 'ArrowRight') shiftSlide(1);
+  });
+
+  function filtrar(categoria) {
+  document.querySelectorAll('.filtro').forEach(function(btn) {
+    btn.classList.remove('activo');
+  });
+  event.target.classList.add('activo');
+
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    var cats = card.dataset.categoria || '';
+    if (categoria === 'todos' || cats.split(' ').indexOf(categoria) !== -1) {
+      card.classList.remove('oculto');
+    } else {
+      card.classList.add('oculto');
+    }
+  });
+}
+</script>
+
+</body>
+</html>
